@@ -1,3 +1,4 @@
+import sys
 import os
 import subprocess
 import re
@@ -24,6 +25,6 @@ while True:
     if isThisRunning('gossip-remover') == False:
         print("Not running")
         print("start gossip-remover")
-        os.system('python /home/oliver/gossip-remover/gossip-remover.py')
+        os.system('python '+os.path.dirname(sys.argv[0])+'/gossip-remover.py')
     else:
         print("Running!")
