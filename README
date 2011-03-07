@@ -1,0 +1,31 @@
+This skype extension lets you remove the messages which you
+don't like to have on screen. This script immediately removes all
+messages when a person in your chat which shouldn't see what you wrote about
+him or about someone else comes online. 
+Attention this script only works for messages you wrote 
+yourself or messages you can edit
+(rightclick on a message must show the oportunity "edit")
+
+e.g.: You wan't to talk with a good friend about personal stuff
+and you don't want your brother or your mother, who also has access to your computer
+and maybe even your skype messages to read it.
+
+e.g.: You are in a group chat with x,y and z.
+(z is not online but when he comes online he will be able to read all you wrote) 
+You all talk bad about z and you don't want him to read all 
+the things you talked about him when he comes online
+
+Before you can use the extension you must know the ChatName
+and you must write a config.ini file which provides this information
+
+config.ini
+
+[UserOptions]
+
+#add all users which totally shouldn't read what you are talking about
+#all you wrote privately will be removed once a contact from this group
+#comes online you can leave it open
+
+RestrictedUsers:username1,username2
+
+
