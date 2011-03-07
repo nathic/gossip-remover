@@ -15,8 +15,9 @@ e.g.: You are in a group chat with x,y and z.
 You all talk bad about z and you don't want him to read all 
 the things you talked about him when he comes online
 
-Before you can use the extension you must know the ChatName
-and you must write a config.ini file which provides this information
+Before you can use the extension you must write your config.ini file
+
+Below is an example
 
 config.ini
 
