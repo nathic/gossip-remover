@@ -9,15 +9,17 @@ import os
 import datetime
 import codecs
 import ConfigParser
+import os.path
 
 Config = ConfigParser.ConfigParser()
-Config.read(os.path.dirname(sys.argv[0])+"/config.ini")
+Config.read(os.path.abspath(".")+"/config.ini")
+print "loading settings from "+os.path.abspath(".")+"/config.ini"
 
 skype = Skype4Py.Skype()
 
 if not skype.Client.IsRunning:
     skype.Client.Start()
-    
+
 skype.FriendlyName = 'Gossip-Remover'
 
 users = Config.get("UserOptions","RestrictedUsers").split(",")
