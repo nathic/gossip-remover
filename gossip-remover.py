@@ -12,8 +12,8 @@ import ConfigParser
 import os.path
 
 Config = ConfigParser.ConfigParser()
-Config.read(os.path.abspath(".")+"/config.ini")
-print "loading settings from "+os.path.abspath(".")+"/config.ini"
+Config.read(os.path.dirname(__file__)+"/config.ini")
+print "loading settings from "+os.path.dirname(__file__)+"/config.ini"
 
 skype = Skype4Py.Skype()
 
@@ -62,7 +62,7 @@ def OnMessageStatus(message, status):
             if(match and match.group(1)):
                 removeRecentMessages()
             elif(match):
-                t = threading.Timer(20, removeMessage, [message.Id]) 
+                t = threading.Timer(Config.get("Chat","RemoveMessageInSeconds"), removeMessage, [message.Id]) 
                 t.start()
 
 def OnOnlineStatus(user,status):
