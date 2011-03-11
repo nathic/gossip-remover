@@ -25,6 +25,6 @@ while True:
     if isThisRunning('gossip-remover') == False:
         print("Not running")
         print("start gossip-remover")
-        os.system('python '+os.path.dirname(sys.argv[0])+'/gossip-remover.py')
+        os.system('python '+os.path.abspath(".")+'/gossip-remover.py')
     else:
         print("Running!")
